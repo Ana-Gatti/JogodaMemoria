@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 90vh;
+    display: flex;
+    background-image: url(img/fundo-body.jpg);
+}
+
+#cardboard {
+    width: 640px;
+    height: 550px;
+    margin:auto;
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: 33%;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.4s;
+}
+
+.memory-card:active{
+    transform: scale(0.97);
+    
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+    
+    
+       
+}
+    
+.front-face{
+    background-color: #404040;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 20px;
+    transform: rotateY(180deg);
+    
+      
+    
+}
+
+.back-face {
+    background-color: #404040;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 8px;  
+    backface-visibility: hidden;
+}
+
+#contador{
+    width: 250px;
+    height: 180px;
+    margin:auto;
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #404040;
+
+}
+
+h1{
+    padding-top: 20px;
+    padding-left: 42px;
+    color: #ffcccc;
+    
+}
+
+p{
+    padding-left: 112px;
+    font-size: 30px;
+    color: #ffcccc;
+    font-weight: bold;
+}
