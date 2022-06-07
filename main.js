@@ -1,8 +1,9 @@
 /**Desenvolvendo jogo da memória para praticar */
 
-const contador = document.querySelector("#contador");
-
 const cardBoard = document.querySelector("#cardboard");
+
+//variavel contador 
+var contador = 0;   
 
 //Array de imagens
 const images = [
@@ -61,18 +62,22 @@ function flipCard() {
 
 function checkForMatch(){ // Função para Verificar a igualdade dos Cards
 
-    /**var contador = 0;
-    Trabalahndo na pontuação*/
-
-
     let isMatch = firstCard.dataset.card === secondCard.dataset.card;
 
     !isMatch ? disableCards(): resetCards(isMatch);
 
-    /**if(isMatch === true){
+    //lógica para pontuação
+    if(isMatch === true){
         contador++
-        Trabalhando na pontuação
-    }*/
+    }
+
+    //Add o contador dentro do Paragrafo de Id #pont
+    document.querySelector("#pont").innerHTML = contador;
+
+    //Inserindo alerta
+    if(contador === 6){
+        alert("Parabéns!!! Você encontrou todos os pares!")
+    }
 }
 
 /**Função para desabilitar o flip das cartas desiguais para
